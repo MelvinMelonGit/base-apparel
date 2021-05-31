@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="stylesheet" href="css/main.css">
+
+  <title>Frontend Mentor | Base Apparel coming soon page</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+  </style>
+</head>
+
+<body>
+
+  <main>
+    <section>
+      <nav class="nav">
+        <a href="#"><img class="nav__logo" src="images/logo.svg" alt="base apparel logo"></a>
+      </nav>
+
+      <picture class="picture">
+        <source media="(min-width:768px)" class="picture__woman" srcset="images/hero-desktop.jpg">
+        <source media="(min-width:320px)" class="picture__woman" srcset="images/hero-mobile.jpg">
+        <img class="picture__woman" src="images/hero-mobile.jpg" alt="woman">
+      </picture>
+
+      <div class="contentWrapper">
+        <h1 class="heading"><span class="heading__accent">We're</span> <span class="heading__next">coming</span> soon</h1>
+
+        <p class="content">Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
+
+        <form class="apparelForm" name="baseApparelForm" action="/baseApparel.php" method="post">
+          <div class="apparelForm__wrapper">
+            <label class="apparelForm__email" for="email">Email Address</label>
+            <input class="apparelForm__input" type="email" id="email" name="email">
+            <input class="apparelForm__submit" type="image" src="images/icon-arrow.svg" alt="Submit">
+          </div>
+        </form>
+        <p id="validationText"></p>
+      </div>
+
+    </section>
+  </main>
+
+  <footer>
+    <p class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#">Melvin Lee</a>.
+    </p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+
+</html>

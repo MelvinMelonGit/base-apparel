@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    display: grid;
+    /* place-content: center; */
+    min-height: 100vh;
+    font-size: 16px;
+    background-image: linear-gradient(hsl(0, 0%, 100%),hsl(0, 100%, 98%));
+}
+
+.nav {
+    padding: 2rem;
+    grid-area: nav;
+}
+
+.nav__logo {
+    width: 6.5rem;
+}
+
+.picture {
+    grid-area: woman;
+}
+
+.picture__woman {
+    width: 100%;
+    height: auto;
+}
+
+.contentWrapper {
+    grid-area: wrapper;
+}
+
+.heading {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 0.5rem;
+    font-weight: 600;
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    line-height: 3rem;
+}
+
+.heading__accent {
+    font-weight: 300;
+    color: hsl(0, 36%, 70%);
+}
+
+.content {
+    font-weight: 400;
+    text-align: center;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+    line-height: 1.6rem;
+    color: hsl(0, 36%, 70%);
+}
+
+.apparelForm__wrapper {
+    display: flex;
+    /* flex-basis: 70% 30%; */
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    border: 1px solid hsla(0, 36%, 70%, 0.4);
+    max-width: 80vw;
+    margin: auto;
+    border-radius: 50px;
+    padding-left: 1rem;
+    overflow: hidden;
+    transition: border 0.5s;
+}
+
+.apparelForm__wrapper::before{
+    content: url(../images/icon-error.svg);
+    position: absolute;
+    right: 5rem;
+    opacity: 0;
+}
+
+.apparelForm__email {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-43%);
+    padding-left: 1rem;
+    color: hsla(0, 36%, 70%, 0.4);
+    transition: opacity 0.5s;
+}
+
+.apparelForm__input {
+    border: none;
+    width: 100%;
+    background-color: rgba(0,0,0,0);
+    padding: 1rem;   
+}
+
+.apparelForm__input:focus {
+    outline: none; 
+    font-family: 'Josefin Sans', sans-serif;
+    color: hsl(0, 6%, 24%);
+}
+
+.apparelForm__submit {
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, hsl(0, 80%, 86%),hsl(0, 74%, 74%));
+}
+
+.apparelForm__submit:hover {
+    background-image: linear-gradient(to right,hsl(0, 74%, 74%),hsl(0, 80%, 86%));
+}
+
+#validationText {
+    opacity: 0;
+    margin-top: 1rem;
+    color:hsl(0, 93%, 68%);
+    transition: opacity 0.5s;
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        place-content: center;
+        background-image: url(../images/bg-pattern-desktop.svg);
+    }
+
+    section {
+        display: grid;
+        grid-template-areas: 
+        "nav woman"
+        "wrapper woman";
+        grid-template-rows: 1fr 5fr;
+        grid-template-columns: 1fr 1fr;
+        align-self: center;
+    }
+
+    .nav {
+        padding: 3rem 0 0 4rem;
+    }
+
+    .nav__logo {
+        width: 9rem;
+    }
+
+    .contentWrapper {
+        padding-left: 4rem;
+    }
+
+    .heading, .content {
+        text-align: left;
+    }
+
+    .heading {
+        font-size: 3rem;
+        letter-spacing: 0.6rem;
+        line-height: 3rem;
+    }
+
+    .content {
+        padding-left: 0;
+        margin-bottom: 1rem;
+    }
+
+    .heading__accent, .heading__next {
+        display: table;
+    }
+
+    .apparelForm__wrapper {
+        max-width: 40vw;
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 1024px) {
+    section {
+        grid-template-rows: 1fr 3fr;
+    }
+
+    .nav {
+        padding: 4rem 0 0 4rem;
+    }
+}
+
+@media only screen and (min-width: 1280px) {
+    section {
+        grid-template-columns: 3fr 2fr;
+    }
+
+    .nav {
+        padding: 6rem 0 0 8rem;
+    }
+
+    .contentWrapper {
+        padding-left: 8rem;
+    }
+
+    .content {
+        padding-right: 15rem;
+    }
+
+    .heading {
+        font-size: 4rem;
+        letter-spacing: 0.7rem;
+        line-height: 4rem;
+    }
+}
